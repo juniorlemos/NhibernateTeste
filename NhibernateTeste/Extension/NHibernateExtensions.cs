@@ -18,7 +18,7 @@ namespace NhibernateTeste.Extension
             var configuration = new Configuration();
             configuration.DataBaseIntegration(c =>
             {
-                c.Dialect<SQLiteDialect>();
+                c.Dialect<MsSql2012Dialect>();
                 c.ConnectionString = connectionString;
                 c.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 c.SchemaAction = SchemaAutoAction.Update;

@@ -1,30 +1,17 @@
-using NHibernate.Cfg;
 using NhibernateTeste.Extension;
-
-using System.Linq;
-using System.Threading.Tasks;
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var connStr = "Data Source=Products.db";
+
+var coonStr = "Data Source=LAPTOP-LHL01L2S;Initial Catalog = Produto; Integrated Security = SSPI;";
 
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddNHibernate(connStr);
-
-
-
+builder.Services.AddNHibernate(coonStr);
 
 
 
